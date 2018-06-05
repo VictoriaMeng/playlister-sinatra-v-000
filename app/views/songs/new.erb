@@ -5,7 +5,7 @@
 
   <p>Select Genres:
   <% Genre.all.map do |genre| %>
-    <input type="checkbox" name="song[genre_ids][]" value="<%= genre.id %>" id="<%= genre.id %>"><%= genre.name %></input>
+    <input type="checkbox" name="song[genre_ids][]" value="<%= genre.id.to_i %>" id="<%= genre.id.to_i %>"><%= genre.name %></input>
   <% end %></p>
 
   <input type="submit" id="Create">
