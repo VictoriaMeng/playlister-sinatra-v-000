@@ -9,5 +9,5 @@
   <%= flash[:message] %>
   <%= @song.name %>
   <%= @artist.name %>
-  <%= @song.genres.name.map(&:name) %>
+  <%= @song.genres.map(&:name) %>
 <% end %>
