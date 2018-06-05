@@ -16,8 +16,6 @@ class SongsController < ApplicationController
   end
 
   post '/songs/new' do
-    binding.pry
-    params[:song][:genre_ids] = params[:song][:genre_ids].map(&:to_i)
     @song = Song.find_or_create_by(name: params[:song_name])
     @artist = Artist.find_or_create_by(name: params[:artist_name])
     @song.artist_id = @artist.id
