@@ -5,4 +5,8 @@
   <% end %>
   <input type="submit" id="Save">
 </form>
-<%= flash[:message] if flash[:message] %>
+<% if flash[:message] %>
+  <%= %>
+  <%= %>
+  <%= %>
+<% end %>
