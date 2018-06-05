@@ -35,7 +35,7 @@ class SongsController < ApplicationController
     @song = Song.find_by_slug(params[:slug])
     @artist = Artist.find_or_create_by(name: params[:artist_name])
     @genre = Genre.find(params[:genre_id])
-    @song.update(artist: @artist)
+    @song.update(artist: @artist, genre: @genre)
     flash[:message] = "Successfully updated song."
     binding.pry
     redirect "/songs/#{@song.slug}"
