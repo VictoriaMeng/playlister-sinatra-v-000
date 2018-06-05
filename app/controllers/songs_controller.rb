@@ -28,6 +28,7 @@ class SongsController < ApplicationController
   get '/songs/:slug/edit' do
     @song = Song.find_by_slug(params[:slug])
     erb :'songs/edit'
+    redirect 'songs/:slug' if flash[:message]
   end
 
   post '/songs/:slug/edit' do
