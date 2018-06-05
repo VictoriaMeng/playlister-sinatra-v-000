@@ -31,8 +31,8 @@ class SongsController < ApplicationController
   end
 
   post '/songs/:slug/edit' do
-    binding.pry
     @song = Song.find_by_slug(params[:slug])
+    binding.pry
     @song.update(params[:song])
     @artist = @song.artist
     @genres = @song.genres
