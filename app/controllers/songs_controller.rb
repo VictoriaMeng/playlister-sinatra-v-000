@@ -31,7 +31,7 @@ class SongsController < ApplicationController
     erb :'songs/edit'
   end
 
-  post '/songs/:slug/edit' do
+  post '/songs/artist/edit' do
     # binding.pry
     @song = Song.find_by_slug(params[:slug])
     @artist = Artist.find_or_create_by(name: params[:artist_name])
