@@ -1,9 +1,9 @@
 <form method="POST" action="/songs/<%= @song.slug %>/edit">
-  New Artist: <input type="text" name="song[artist][name]" id="Artist Name" id="artist_name">
+  New Artist: <input type="text" name="song[artist][name]" id="Artist Name" value="<%= A">
   <!-- New Song Name: <input type="text" name="song_name" id="Song Name"> -->
-  <% Genre.all.each do |genre| %>
+  <!-- <% Genre.all.each do |genre| %>
     <input type="checkbox" name="song[genre][names][]" value="<%= genre.name %>"><%= genre.name %></input>
-  <% end %>
+  <% end %> -->
   <input type="submit" id="Save">
 </form>
 <% if flash[:message] %>
