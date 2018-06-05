@@ -37,7 +37,7 @@ class SongsController < ApplicationController
     @song.update(artist: @artist)
     flash[:message] = "Successfully updated song."
     # binding.pry
-    redirect "/songs/#{@song.slug}/edit"
+    redirect "/songs/#{@song.slug}"
   end
 
 end
