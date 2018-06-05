@@ -3,4 +3,6 @@
   <!-- New Song Name: <input type="text" name="song_name" id="Song Name"> -->
   <input type="submit" id="Save">
 </form>
-<%= flash[:message] if flash[:message] %>
+<% if flash[:message] %>
+  <%= flash[:message] %>
+<% end %>
