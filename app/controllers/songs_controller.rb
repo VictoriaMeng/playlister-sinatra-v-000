@@ -32,12 +32,12 @@ class SongsController < ApplicationController
   end
 
   post '/songs/:slug/artist/edit' do
-    # binding.pry
+    binding.pry
     @song = Song.find_by_slug(params[:slug])
     @artist = Artist.find_or_create_by(name: params[:artist_name])
     @song.update(artist: @artist)
     flash[:message] = "Successfully updated song."
-    # binding.pry
+    binding.pry
     redirect "/songs/#{@song.slug}/edit"
   end
 
