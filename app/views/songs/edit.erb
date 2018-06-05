@@ -1,5 +1,6 @@
 <form method="POST" action="/songs/<%= @song.slug %>/edit">
   New Artist: <input type="text" name="artist_name" id="Artist Name">
+  New Song Name: <input type="text" name="song_name" id="Song Name">
   <input type="submit" id="Save">
 </form>
 <%= flash[:message] if flash[:message] %>
